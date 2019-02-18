@@ -10,9 +10,9 @@ class UsersController < ApplicationController
     #sign up
     @user = User.create(user_params)
 
-    if @user.authenticate(params[:user][:password])
+    if @user.save
       session[:user_id] = @user.id
-      redirect_to controller: 'users',  action: 'welcome'
+      redirect_to  'welcome'
     else
       redirect_to 'new'
     end
