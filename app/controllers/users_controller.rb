@@ -3,5 +3,6 @@ class UsersController < ApplicationController
   end
 
   def welcome
+    
   end
 end
