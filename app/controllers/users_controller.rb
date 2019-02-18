@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def welcome
-    
+
   end
 
   def create
