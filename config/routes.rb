@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post 'sessions/create'
 
   get 'users/welcome'
+  post 'users/create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
