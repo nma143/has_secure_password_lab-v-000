@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def create
     #sign up
-    if params[:user][:password]!=params[:user][:password_confirmation]
+    if !(params[:user][:password]== params[:user][:password_confirmation])
       redirect_to 'new'
     else
       @user = User.create(user_params)
