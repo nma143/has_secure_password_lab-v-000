@@ -20,8 +20,6 @@ class UsersController < ApplicationController
         redirect_to 'new'
       end
     end
-
-
   end
 
   def user_params
