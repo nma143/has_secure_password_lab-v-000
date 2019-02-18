@@ -9,7 +9,9 @@ class SessionsController < ApplicationController
 
     if @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
-
-    redirect_to controller: 'users',  action: 'welcome'
+      redirect_to controller: 'users',  action: 'welcome'
+    else
+      redirect_to 'new'
+    end
   end
 end
