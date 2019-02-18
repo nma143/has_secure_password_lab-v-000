@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    #sign up
 
   end
 end
