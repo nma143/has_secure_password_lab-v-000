@@ -8,13 +8,17 @@ class UsersController < ApplicationController
 
   def create
     #sign up
-    @user = User.create(user_params)
-
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to  'welcome'
-    else
+    if params[:user][:password]!=params[:user][:password_confirmation]
       redirect_to 'new'
+    else
+      @user = User.create(user_params)
+
+      if @user.save
+        session[:user_id] = @user.id
+        redirect_to  'welcome'
+      else
+        redirect_to 'new'
+      end
     end
 
 
